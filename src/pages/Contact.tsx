@@ -56,7 +56,7 @@ const SOCIALS = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/fredericklenind',
+    href: 'https://linkedin.com/in/frederick-lenin-d',
     desc: 'Professional profile and work history',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

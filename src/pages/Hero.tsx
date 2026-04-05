@@ -252,7 +252,7 @@ export default function Hero() {
                 <a href="https://github.com/frederick-lenin" target="_blank" rel="noopener noreferrer" class={styles.socialLink}>
                   GitHub ↗
                 </a>
-                <a href="https://linkedin.com/in/fredericklenind" target="_blank" rel="noopener noreferrer" class={styles.socialLink}>
+                <a href="https://linkedin.com/in/frederick-lenin-d" target="_blank" rel="noopener noreferrer" class={styles.socialLink}>
                   LinkedIn ↗
                 </a>
               </div>
