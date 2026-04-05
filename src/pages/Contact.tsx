@@ -69,6 +69,11 @@ const SOCIALS = [
 export default function Contact() {
   let pageRef!: HTMLDivElement;
   const [copied, setCopied] = createSignal(false);
+  const [fromEmail, setFromEmail] = createSignal('');
+  const [subject, setSubject] = createSignal('');
+  const [message, setMessage] = createSignal('');
+  const [sent, setSent] = createSignal(false);
+
   useIntersectionObserver(() => pageRef, '.fade-up, .fade-in');
 
   const copyEmail = async () => {
@@ -77,6 +82,16 @@ export default function Contact() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {}
+  };
+
+  const handleSend = (e: Event) => {
+    e.preventDefault();
+    if (!fromEmail().trim() || !subject().trim() || !message().trim()) return;
+    const body = `From: ${fromEmail()}\n\n${message()}`;
+    const mailto = `mailto:fredericklenind@outlook.com?subject=${encodeURIComponent(subject())}&body=${encodeURIComponent(body)}`;
+    window.open(mailto, '_self');
+    setSent(true);
+    setTimeout(() => setSent(false), 3000);
   };
 
   return (
@@ -167,6 +182,83 @@ export default function Contact() {
                 <p class={styles.statusDetail}>Open to full-time roles, consulting, and architectural projects.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---- GET IN TOUCH FORM ---- */}
+      <section class={styles.formSection} aria-labelledby="form-title">
+        <div class="container">
+          <div class={`${styles.formInner} fade-up`}>
+            <div class={styles.formHeader}>
+              <p class={styles.pageCode}>Transmit_Message</p>
+              <h2 id="form-title" class={styles.formTitle}>Get In Touch.</h2>
+              <p class={styles.formDesc}>
+                Have a project in mind? Send a direct transmission and I'll respond within 24 hours.
+              </p>
+            </div>
+
+            <form class={styles.form} onSubmit={handleSend} novalidate>
+              <div class={styles.fieldGroup}>
+                <label class={styles.fieldLabel} for="msg-from">Your Email</label>
+                <input
+                  id="msg-from"
+                  type="email"
+                  class={styles.fieldInput}
+                  placeholder="you@example.com"
+                  value={fromEmail()}
+                  onInput={(e) => setFromEmail(e.currentTarget.value)}
+                  required
+                />
+              </div>
+
+              <div class={styles.fieldGroup}>
+                <label class={styles.fieldLabel} for="msg-subject">Subject</label>
+                <input
+                  id="msg-subject"
+                  type="text"
+                  class={styles.fieldInput}
+                  placeholder="e.g. Project Collaboration"
+                  value={subject()}
+                  onInput={(e) => setSubject(e.currentTarget.value)}
+                  required
+                  maxLength={120}
+                />
+              </div>
+
+              <div class={styles.fieldGroup}>
+                <label class={styles.fieldLabel} for="msg-body">Message</label>
+                <textarea
+                  id="msg-body"
+                  class={`${styles.fieldInput} ${styles.fieldTextarea}`}
+                  placeholder="Describe what you'd like to build or discuss..."
+                  value={message()}
+                  onInput={(e) => setMessage(e.currentTarget.value)}
+                  required
+                  rows={5}
+                  maxLength={2000}
+                />
+                <span class={styles.charCount}>{message().length} / 2000</span>
+              </div>
+
+              <button
+                type="submit"
+                class={`${styles.sendBtn} ${sent() ? styles.sendBtnSent : ''}`}
+                disabled={!fromEmail().trim() || !subject().trim() || !message().trim()}
+              >
+                {sent() ? (
+                  <>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Transmission Initiated
+                  </>
+                ) : (
+                  <>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    Transmit_Message
+                  </>
+                )}
+              </button>
+            </form>
           </div>
         </div>
       </section>

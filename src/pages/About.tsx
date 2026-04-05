@@ -8,8 +8,8 @@ const CATEGORIES = [
     icon: '⬡',
     skills: [
       { name: 'Python',   level: 95, note: 'Primary language' },
-      { name: 'Django',   level: 92, note: 'Web framework' },
-      { name: 'FastAPI',  level: 88, note: 'Async APIs' },
+      { name: 'Django',   level: 90, note: 'Web framework' },
+      { name: 'FastAPI',  level: 80, note: 'Async APIs' },
       { name: 'Flask',    level: 80, note: 'Microservices' },
     ],
   },
@@ -18,9 +18,9 @@ const CATEGORIES = [
     desc: 'Generative AI and Large Language Model orchestration.',
     icon: '◈',
     skills: [
-      { name: 'LangChain', level: 85, note: 'RAG pipelines' },
-      { name: 'OpenAI API', level: 88, note: 'GPT integration' },
-      { name: 'LLM Integration', level: 82, note: 'Fine-tuning' },
+      { name: 'LangChain', level: 70, note: 'RAG pipelines' },
+      { name: 'OpenAI API', level: 80, note: 'GPT integration' },
+      { name: 'LLM Integration', level: 75, note: 'Fine-tuning' },
       { name: 'OCR Masking',   level: 78, note: 'Data security' },
     ],
   },
@@ -29,12 +29,11 @@ const CATEGORIES = [
     desc: 'Deployment, orchestration, and data persistence.',
     icon: '◫',
     skills: [
-      { name: 'Docker',       level: 90, note: 'Containerization' },
+      { name: 'Docker',       level: 80, note: 'Containerization' },
       { name: 'PostgreSQL',   level: 88, note: 'Primary DB' },
       { name: 'Redis',        level: 86, note: 'Caching / broker' },
-      { name: 'Kubernetes',   level: 70, note: 'Orchestration' },
       { name: 'RabbitMQ',     level: 78, note: 'Message queue' },
-      { name: 'Celery',       level: 84, note: 'Task workers' },
+      { name: 'Celery',       level: 80, note: 'Task workers' },
     ],
   },
   {
@@ -42,8 +41,7 @@ const CATEGORIES = [
     desc: 'Reactive UI systems and state management.',
     icon: '◻',
     skills: [
-      { name: 'ReactJS',    level: 86, note: 'UI library' },
-      { name: 'Next.js',    level: 78, note: 'SSR / SSG' },
+      { name: 'ReactJS',    level: 75, note: 'UI library' },
       { name: 'WebSocket',  level: 85, note: 'Real-time' },
       { name: 'MySQL',      level: 80, note: 'Relational DB' },
     ],
