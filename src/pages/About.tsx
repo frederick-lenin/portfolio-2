@@ -52,7 +52,7 @@ const DEPLOY_PROTOCOL = [
   { line: '01', text: '$ init_arsenal --user "Frederick Lenin D."', type: 'cmd' },
   { line: '02', text: '[SYSTEM] Scanning capabilities...', type: 'sys' },
   { line: '03', text: '[SUCCESS] Backend: Python / FastAPI / Django', type: 'ok' },
-  { line: '04', text: '[SUCCESS] Frontend: React / NextJS / Tailwind', type: 'ok' },
+  { line: '04', text: '[SUCCESS] Frontend: React / Tailwind', type: 'ok' },
   { line: '05', text: '[SUCCESS] Infrastructure: Docker / Redis / PostgreSQL', type: 'ok' },
   { line: '06', text: '[SUCCESS] Real-time: WebSockets / Celery Workers', type: 'ok' },
   { line: '07', text: '[SUCCESS] Intelligence: LangChain / OpenAI Integration', type: 'ok' },

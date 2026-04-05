@@ -48,7 +48,7 @@ const TERMINAL_LINES = [
   '$ init_portfolio --user="FrederickLeninD"',
   '[SYSTEM] Scanning capabilities...',
   '[SUCCESS] Backend: Python / FastAPI / Django',
-  '[SUCCESS] Frontend: React / NextJS / TypeScript',
+  '[SUCCESS] Frontend: React / TypeScript',
   '[SUCCESS] Infrastructure: Docker / Redis / PostgreSQL',
   '[SUCCESS] Real-time: WebSockets / Celery Workers',
   '[SUCCESS] Intelligence: LangChain / OpenAI Integration',

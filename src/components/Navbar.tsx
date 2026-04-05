@@ -3,10 +3,10 @@ import { A } from '@solidjs/router';
 import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
-  { href: '/',         label: 'Experience' },
-  { href: '/projects', label: 'Projects'   },
-  { href: '/stack',    label: 'Stack'      },
-  { href: '/contact',  label: 'Contact'    },
+  { href: '/', label: 'Experience' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/stack', label: 'Stack' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
@@ -58,9 +58,9 @@ export default function Navbar() {
           </ul>
 
           {/* CTA */}
-          <A href="/contact" class={`${styles.ctaBtn} btn-primary`}>
-            Hire Me
-          </A>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class={`${styles.ctaBtn} btn-primary`}>
+            RESUME
+          </a>
 
           {/* Hamburger */}
           <button
@@ -116,9 +116,9 @@ export default function Navbar() {
           ))}
         </ul>
         <div class={styles.drawerFooter}>
-          <A href="/contact" class="btn-primary" onClick={closeDrawer} style={{ width: '100%', 'justify-content': 'center' }}>
-            Hire Me
-          </A>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary" onClick={closeDrawer} style={{ width: '100%', 'justify-content': 'center', display: 'flex' }}>
+            RESUME
+          </a>
         </div>
       </div>
     </>
