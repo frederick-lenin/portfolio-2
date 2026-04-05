@@ -161,7 +161,7 @@ export default function About() {
             Additional tools and platforms used throughout engineering workflows.
           </p>
           <div class={`${styles.toolingGrid} fade-up stagger-2`}>
-            {['Git', 'VS Code', 'Postman', 'Nginx', 'Ubuntu', 'GitHub Actions', 'Jira', 'Figma', 'Milvus', 'Grafana'].map((tool) => (
+            {['Git', 'VS Code', 'Antigravity', 'Postman', 'Slack', 'Ubuntu', 'GitHub Actions', 'Milvus', 'Microsoft Azure'].map((tool) => (
               <span class="tech-chip">{tool}</span>
             ))}
           </div>
