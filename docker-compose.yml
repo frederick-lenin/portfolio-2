@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: portfolio
     ports:
-      - "3000:3000"
+      - "5000:80"
     restart: always
     # Compression and optimization configuration
     environment:
