@@ -106,7 +106,7 @@ export default function Contact() {
               LET'S BUILD<br />THE FUTURE.
             </h1>
             <p class={styles.pageDesc}>
-              Frederick Lenin D. is available for high-impact technical roles and
+              Frederick Lenin D is available for high-impact technical roles and
               architectural consulting. Precision-driven engineering for global challenges.
             </p>
           </div>
