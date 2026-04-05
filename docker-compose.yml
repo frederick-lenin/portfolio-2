@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: logic_noir_portfolio
+    ports:
+      - "8080:80"
+    restart: always
+    # Compression and optimization configuration
+    environment:
+      - NODE_ENV=production
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
