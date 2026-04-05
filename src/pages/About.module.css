@@ -1,0 +1,287 @@
+/* ---- ABOUT / STACK PAGE ---- */
+.page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---- HERO ---- */
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  padding-top: 72px; /* navbar height */
+  padding-bottom: var(--space-xl);
+}
+
+.heroHeader {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.pageCode {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  color: var(--accent-primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-display);
+  font-weight: 700;
+  color: var(--text-heading);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.pageDesc {
+  font-size: var(--text-body-lg);
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 52ch;
+}
+
+/* ---- SECTION LABELS ---- */
+.sectionLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  color: var(--accent-primary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  font-weight: 700;
+  color: var(--text-heading);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-lg);
+}
+
+/* ---- CATEGORIES ---- */
+.categoriesSection {
+  padding-block: var(--section-pad-y);
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .categoriesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.categoryCard {
+  background: var(--bg-surface);
+  border: var(--border-ghost);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+@media (hover: hover) {
+  .categoryCard:hover {
+    background: var(--bg-surface-high);
+    border-color: rgba(170, 255, 220, 0.12);
+  }
+}
+
+.catHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.catIcon {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.catTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 4px;
+}
+
+.catDesc {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.skillHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.skillName {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--text-heading);
+  flex: 1;
+}
+
+.skillNote {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  color: var(--text-disabled);
+  letter-spacing: 0.06em;
+}
+
+.skillLevel {
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  color: var(--accent-primary);
+  min-width: 36px;
+  text-align: right;
+}
+
+.skillBar {
+  height: 4px;
+  background: rgba(170, 255, 220, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skillFill {
+  height: 100%;
+  width: var(--fill, 0%);
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  transition: width 1s ease-out 0.3s;
+}
+
+/* ---- DEPLOY SECTION ---- */
+.deploySection {
+  padding-block: var(--section-pad-y);
+}
+
+.deployGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .deployGrid { grid-template-columns: 1fr 1.2fr; }
+}
+
+.deployLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.deployDesc {
+  font-size: var(--text-body-lg);
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 44ch;
+}
+
+.deployRight {}
+
+.terminalBlock {
+  background: var(--bg-secondary);
+  border: var(--border-ghost);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.termHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-surface);
+  border-bottom: var(--border-ghost);
+}
+
+.termDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.termTitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  color: var(--text-disabled);
+  margin-left: auto;
+}
+
+.termBody {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.termLine {
+  display: flex;
+  gap: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  line-height: 1.6;
+}
+
+.lineNum {
+  color: var(--text-disabled);
+  min-width: 24px;
+  user-select: none;
+}
+
+.lineText { color: var(--text-muted); flex: 1; }
+
+/* Type-based oolors */
+.termcmd .lineText { color: var(--accent-secondary); }
+.termsys .lineText { color: var(--text-muted); }
+.termok  .lineText { color: var(--accent-primary); }
+.termready .lineText { color: var(--text-heading); font-weight: 600; }
+
+/* ---- SUPPLEMENTARY TOOLING ---- */
+.toolingSection {
+  padding-block: var(--section-pad-y);
+}
+
+.toolingDesc {
+  font-size: var(--text-body-lg);
+  color: var(--text-muted);
+  margin-bottom: var(--space-xl);
+  max-width: 48ch;
+}
+
+.toolingGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}

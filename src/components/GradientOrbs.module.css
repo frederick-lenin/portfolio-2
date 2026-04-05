@@ -1,0 +1,69 @@
+.orbContainer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform, opacity;
+}
+
+/* Orb 1 — Mint, top-left */
+.orb1 {
+  width: clamp(280px, 35vw, 520px);
+  height: clamp(280px, 35vw, 520px);
+  top: -10%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(0, 237, 180, 0.12) 0%, transparent 65%);
+  animation: breathe1 9s ease-in-out infinite;
+}
+
+/* Orb 2 — Tech Blue, bottom-right */
+.orb2 {
+  width: clamp(240px, 30vw, 480px);
+  height: clamp(240px, 30vw, 480px);
+  bottom: -8%;
+  right: -6%;
+  background: radial-gradient(circle, rgba(148, 181, 255, 0.10) 0%, transparent 60%);
+  animation: breathe2 11s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+/* Orb 3 — Faint Mint, center — hidden on mobile */
+.orb3 {
+  width: clamp(180px, 22vw, 360px);
+  height: clamp(180px, 22vw, 360px);
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(170, 255, 220, 0.06) 0%, transparent 60%);
+  animation: breathe3 13s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+/* Keyframes */
+@keyframes breathe1 {
+  0%, 100% { transform: scale(1.0) translate(0, 0); opacity: 1; }
+  50%       { transform: scale(1.15) translate(3%, 4%); opacity: 0.8; }
+}
+
+@keyframes breathe2 {
+  0%, 100% { transform: scale(1.0) translate(0, 0); opacity: 1; }
+  50%       { transform: scale(1.12) translate(-4%, -3%); opacity: 0.75; }
+}
+
+@keyframes breathe3 {
+  0%, 100% { transform: translate(-50%, -50%) scale(1.0); opacity: 1; }
+  50%       { transform: translate(-50%, -50%) scale(1.2); opacity: 0.6; }
+}
+
+/* Mobile: hide orb3 and reduce orb sizes */
+@media (max-width: 767px) {
+  .orb3 { display: none; }
+  .orb   { filter: blur(60px); }
+}

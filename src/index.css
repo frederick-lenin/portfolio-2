@@ -1,0 +1,363 @@
+/* ============================================================
+   PORTFOLIO DESIGN SYSTEM — Frederick Lenin D. Portfolio
+   Extracted from Stitch design tokens (project 10921039555839899707)
+   ============================================================ */
+
+/* ---- DESIGN TOKENS ---- */
+:root {
+  /* Backgrounds — Deep Obsidian Dark Mode */
+  --bg-primary:          #0e0e12;
+  --bg-secondary:        #131317;
+  --bg-surface:          #19191e;
+  --bg-surface-high:     #1f1f24;
+  --bg-surface-highest:  #25252b;
+  --bg-bright:           #2c2b32;
+
+  /* Accents */
+  --accent-primary:      #aaffdc;   /* Mint green */
+  --accent-primary-dim:  #00edb4;
+  --accent-primary-ctr:  #00fdc1;
+  --accent-secondary:    #94b5ff;   /* Tech blue */
+  --accent-error:        #ff716c;
+
+  /* Text */
+  --text-heading:   #fbf8fe;
+  --text-body:      #fbf8fe;
+  --text-muted:     #acaab0;
+  --text-disabled:  #76757a;
+  --text-on-accent: #00654b;
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Manrope', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Fluid Type Scale */
+  --text-display: clamp(2.8rem, 7vw, 5.5rem);
+  --text-hero:    clamp(2.2rem, 5vw, 4rem);
+  --text-h1:      clamp(1.8rem, 3.5vw, 3rem);
+  --text-h2:      clamp(1.4rem, 2.5vw, 2rem);
+  --text-h3:      clamp(1.1rem, 2vw, 1.5rem);
+  --text-body-lg: clamp(1rem, 1.5vw, 1.125rem);
+  --text-body:    clamp(0.875rem, 1.3vw, 1rem);
+  --text-small:   clamp(0.75rem, 1.1vw, 0.875rem);
+  --text-label:   clamp(0.65rem, 0.9vw, 0.75rem);
+  --text-mono:    clamp(0.75rem, 1.1vw, 0.875rem);
+
+  /* Fluid Spacing Scale */
+  --space-2xs: clamp(2px,  0.3vw,  4px);
+  --space-xs:  clamp(4px,  0.5vw,  8px);
+  --space-sm:  clamp(8px,  1vw,    12px);
+  --space-md:  clamp(12px, 1.5vw,  20px);
+  --space-lg:  clamp(20px, 2.5vw,  36px);
+  --space-xl:  clamp(36px, 5vw,    64px);
+  --space-2xl: clamp(64px, 8vw,    112px);
+  --space-3xl: clamp(96px, 12vw,   160px);
+
+  /* Section padding */
+  --section-pad-y:      clamp(56px, 9vw, 128px);
+  --container-pad-x:    clamp(16px, 5vw, 80px);
+  --container-max:      1320px;
+
+  /* Glassmorphism */
+  --glass-bg:        rgba(14, 14, 18, 0.82);
+  --glass-blur:      blur(20px);
+  --glass-border:    1px solid rgba(170, 255, 220, 0.06);
+  --glass-border-hl: 1px solid rgba(170, 255, 220, 0.12);
+
+  /* Gradients */
+  --gradient-accent:  linear-gradient(135deg, #aaffdc 0%, #00edb4 100%);
+  --gradient-accent2: linear-gradient(135deg, #94b5ff 0%, #7aa2f7 100%);
+  --gradient-hero:    linear-gradient(160deg, #1f1f24 0%, #0e0e12 60%);
+
+  /* Borders */
+  --border-ghost:   1px solid rgba(118, 117, 122, 0.15);
+  --border-accent:  1px solid rgba(170, 255, 220, 0.2);
+
+  /* Radii */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast:   150ms ease-out;
+  --transition-base:   200ms ease-out;
+  --transition-slow:   350ms ease-out;
+
+  /* Shadows */
+  --shadow-card:   0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow:   0 0 24px rgba(170, 255, 220, 0.15);
+  --shadow-float:  0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- GLOBAL RESET ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- ROOT SHELL ---- */
+#root {
+  position: relative;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* ---- TYPOGRAPHY ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-heading);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+}
+
+p {
+  overflow-wrap: break-word;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color var(--transition-base), opacity var(--transition-base);
+}
+
+a:hover { opacity: 0.8; }
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+
+ul, ol { list-style: none; }
+
+/* ---- CONTAINER ---- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad-x);
+}
+
+/* ---- UTILITY CLASSES ---- */
+.font-mono  { font-family: var(--font-mono); }
+.font-head  { font-family: var(--font-heading); }
+.text-muted { color: var(--text-muted); }
+.text-accent { color: var(--accent-primary); }
+.text-secondary { color: var(--accent-secondary); }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ---- SECTION SEPARATOR (tonal, no line) ---- */
+.section-alt { background-color: var(--bg-secondary); }
+.section-surface { background-color: var(--bg-surface); }
+
+/* ---- GLOBAL BUTTONS ---- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--gradient-accent);
+  color: var(--text-on-accent);
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  min-height: 48px;
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .btn-primary:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: transparent;
+  color: var(--accent-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  border: var(--border-accent);
+  transition: background var(--transition-base), box-shadow var(--transition-base);
+  min-height: 48px;
+}
+
+@media (hover: hover) {
+  .btn-ghost:hover {
+    background: rgba(170, 255, 220, 0.06);
+    box-shadow: var(--shadow-glow);
+    opacity: 1;
+  }
+}
+
+/* ---- TECH CHIP / TAG PILL ---- */
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xs) var(--space-md);
+  background-color: var(--bg-surface);
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-md);
+  border: var(--border-ghost);
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+@media (hover: hover) {
+  .tech-chip:hover {
+    background: rgba(170, 255, 220, 0.08);
+    border-color: rgba(170, 255, 220, 0.25);
+  }
+}
+
+/* ---- TERMINAL BLOCK ---- */
+.terminal-block {
+  background: var(--bg-primary);
+  border: var(--border-ghost);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  color: var(--accent-primary);
+  overflow: hidden;
+  position: relative;
+}
+
+.terminal-block::before {
+  content: '●  ●  ●';
+  display: block;
+  color: var(--text-disabled);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- SCROLL ANIMATION CLASSES ---- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Stagger delays for child elements */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* ---- REDUCED MOTION ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-up,
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---- PAGE LAYOUT ---- */
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure no horizontal scroll */
+.overflow-guard {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--bg-bright); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-disabled); }
+
+/* ---- SELECTION ---- */
+::selection {
+  background: rgba(170, 255, 220, 0.2);
+  color: var(--text-heading);
+}
