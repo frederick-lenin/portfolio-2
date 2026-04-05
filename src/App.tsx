@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'solid-js';
 import { Router, Route } from '@solidjs/router';
+import type { RouteSectionProps } from '@solidjs/router';
 import BackgroundCanvas from './components/BackgroundCanvas';
 import GradientOrbs from './components/GradientOrbs';
 import NoiseOverlay from './components/NoiseOverlay';
@@ -33,7 +34,7 @@ function PageLoader() {
   );
 }
 
-function AppShell(props: { children: any }) {
+function AppShell(props: RouteSectionProps) {
   return (
     <>
       {/* Background Layers — z-index 0, 0, 1 */}
