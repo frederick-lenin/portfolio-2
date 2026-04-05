@@ -145,7 +145,7 @@ export default function Hero() {
                 <span>GITHUB</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10" /></svg>
               </a>
-              <a href="https://linkedin.com/in/fredericklenind" target="_blank" rel="noopener noreferrer" class={styles.socialLink}>
+              <a href="https://linkedin.com/in/frederick-lenin-d" target="_blank" rel="noopener noreferrer" class={styles.socialLink}>
                 <span>LINKEDIN</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10" /></svg>
               </a>
